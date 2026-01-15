@@ -1,79 +1,43 @@
-/* Thiết lập cơ bản */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* { box-sizing: border-box; }
+body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+
+.wrapper {
+    display: flex; /* Chia 2 cột */
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    padding: 20px;
-}
-
-/* Container chính chia 2 cột */
-.container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    gap: 30px;
-}
-
-/* Sidebar cột trái */
 .sidebar {
     flex: 30%;
-    padding-right: 15px;
+    background: white;
+    padding: 15px;
 }
 
-.sidebar h3 {
-    margin: 15px 0 5px 0;
-}
-
-/* Nội dung chính cột phải */
-.main-content {
+.content {
     flex: 70%;
+    background: white;
+    padding: 15px;
 }
 
-.main-content h2 {
-    margin-top: 20px;
-}
-
-.date {
-    color: #666;
-    font-size: 0.9em;
-    margin-bottom: 15px;
-}
-
-/* Định dạng hình ảnh */
-.image-box {
-    background-color: #aaa;
-    width: 100%;
-    height: 100px; /* Chiều cao cố định cho các ảnh nhỏ bên trái */
+/* Code để hiện ảnh đẹp */
+.img-small {
+    width: 100%;       /* Ảnh rộng bằng cột trái */
+    height: auto;      /* Tự điều chỉnh chiều cao theo tỉ lệ */
     margin-bottom: 10px;
-    overflow: hidden;
+    border: 1px solid #ddd;
 }
 
-.main-image {
-    background-color: #aaa;
+.img-container {
     width: 100%;
-    height: 300px; /* Chiều cao cố định cho ảnh chính */
-    margin: 15px 0;
-    overflow: hidden;
+    padding: 20px;
+    background: #e0e0e0; /* Nền xám bao quanh ảnh cho giống đề bài */
+    text-align: center;
 }
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Giúp ảnh không bị méo khi vào khung */
+.img-container img {
+    max-width: 100%;   /* Ảnh không tràn khung */
+    height: auto;
     display: block;
-}
-
-/* Responsive cho điện thoại */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
+    margin: 0 auto;
 }
