@@ -1,83 +1,79 @@
-
-body {
+/* Thiết lập cơ bản */
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: sans-serif;
-    color: #333;
+    padding: 0;
 }
 
-/* Phần Banner và Cards [cite: 11, 24] */
-.banner {
-    background: url('f37448fa6e5fe101b84e (1).jpg') no-repeat center center/cover;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
     padding: 20px;
 }
 
+/* Container chính chia 2 cột */
 .container {
     display: flex;
-    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    gap: 30px;
 }
 
-.card {
-    background: #fff;
-    padding: 25px;
-    width: 280px;
-    border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+/* Sidebar cột trái */
+.sidebar {
+    flex: 30%;
+    padding-right: 15px;
 }
 
-.icon {
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    color: white; margin-bottom: 15px;
+.sidebar h3 {
+    margin: 15px 0 5px 0;
 }
 
-.bg-blue { background: #007bff; }
-.bg-green { background: #28a745; }
-.bg-orange { background: #ffc107; }
-
-/* Phần Basic Elements [cite: 18, 19, 24] */
-.basic-elements {
-    padding: 50px 10%;
-    background: #fff;
+/* Nội dung chính cột phải */
+.main-content {
+    flex: 70%;
 }
 
-.basic-elements h1 { font-size: 28px; margin-bottom: 10px; }
-
-.button-group, .button-group-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 20px 0;
+.main-content h2 {
+    margin-top: 20px;
 }
 
-/* Các kiểu nút bấm [cite: 19, 20, 21] */
-.btn {
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
+.date {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
 }
 
-.btn-default { background: #e7e7e7; color: #333; }
-.btn-blue { background: #007bff; color: white; }
-.btn-green { background: #28a745; color: white; }
-.btn-orange { background: #ffc107; color: white; }
-.btn-rounded { background: #17a2b8; color: white; border-radius: 25px; }
-.btn-icon { background: #007bff; color: white; display: flex; align-items: center; gap: 5px; }
-.btn-simple { background: transparent; border: 1px solid #ccc; }
+/* Định dạng hình ảnh */
+.image-box {
+    background-color: #aaa;
+    width: 100%;
+    height: 100px; /* Chiều cao cố định cho các ảnh nhỏ bên trái */
+    margin-bottom: 10px;
+    overflow: hidden;
+}
 
-/* Phần Links */
-.link { text-decoration: none; font-size: 14px; font-weight: bold; }
-.link.blue { color: #007bff; }
-.link.gray { color: #6c757d; }
-.link.cyan { color: #17a2b8; }
-.link.red { color: #dc3545; }
-.link.yellow { color: #ffc107; }
+.main-image {
+    background-color: #aaa;
+    width: 100%;
+    height: 300px; /* Chiều cao cố định cho ảnh chính */
+    margin: 15px 0;
+    overflow: hidden;
+}
 
-p { font-size: 14px; color: #555; line-height: 1.5; }
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giúp ảnh không bị méo khi vào khung */
+    display: block;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
