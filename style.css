@@ -1,12 +1,11 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
+    background-color: #f2f2f2;
+    margin: 0;
     padding: 20px;
 }
 
@@ -14,62 +13,33 @@ body {
     display: flex;
     max-width: 1100px;
     margin: auto;
-    gap: 20px;
+    background: white;
+    padding: 20px;
 }
 
 /* Cột trái */
-.sidebar {
-    flex: 30%;
-    background: white;
-    padding: 20px;
+.left {
+    width: 30%;
+    padding-right: 20px;
+}
+
+.left img {
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 /* Cột phải */
-.main-content {
-    flex: 70%;
-    background: white;
-    padding: 20px;
+.right {
+    width: 70%;
 }
 
-/* CSS cho 3 ảnh nhỏ bên trái */
-.img-box {
+.main-img {
     width: 100%;
-    height: 100px; /* Chiều cao khung ảnh nhỏ */
-    background-color: #aaa;
-    margin-top: 15px;
-    overflow: hidden;
-}
-
-.img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Giữ ảnh vừa khít khung */
-}
-
-/* CSS cho ảnh lớn bên phải */
-.img-large-container {
-    width: 100%;
-    background-color: #aaa;
-    padding: 40px; /* Tạo khoảng trắng bao quanh ảnh giống như đề bài */
-    margin: 20px 0;
-    text-align: center;
-}
-
-.img-large {
-    max-width: 100%;
     height: auto;
-    max-height: 300px;
-    display: block;
-    margin: 0 auto;
+    margin: 15px 0;
 }
 
-h2, h3, h5, p {
-    margin-bottom: 10px;
-}
-
-/* Responsive: Màn hình nhỏ thì xếp chồng thành 1 cột */
-@media screen and (max-width: 700px) {
-    .container {
-        flex-direction: column;
-    }
+.date {
+    color: gray;
+    font-size: 14px;
 }
