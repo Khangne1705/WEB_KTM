@@ -1,43 +1,75 @@
-* { box-sizing: border-box; }
-body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
-
-.wrapper {
-    display: flex; /* Chia 2 cột */
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    gap: 20px;
+}
+
+/* Cột trái */
 .sidebar {
     flex: 30%;
     background: white;
-    padding: 15px;
+    padding: 20px;
 }
 
-.content {
+/* Cột phải */
+.main-content {
     flex: 70%;
     background: white;
-    padding: 15px;
-}
-
-/* Code để hiện ảnh đẹp */
-.img-small {
-    width: 100%;       /* Ảnh rộng bằng cột trái */
-    height: auto;      /* Tự điều chỉnh chiều cao theo tỉ lệ */
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-}
-
-.img-container {
-    width: 100%;
     padding: 20px;
-    background: #e0e0e0; /* Nền xám bao quanh ảnh cho giống đề bài */
+}
+
+/* CSS cho 3 ảnh nhỏ bên trái */
+.img-box {
+    width: 100%;
+    height: 100px; /* Chiều cao khung ảnh nhỏ */
+    background-color: #aaa;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ ảnh vừa khít khung */
+}
+
+/* CSS cho ảnh lớn bên phải */
+.img-large-container {
+    width: 100%;
+    background-color: #aaa;
+    padding: 40px; /* Tạo khoảng trắng bao quanh ảnh giống như đề bài */
+    margin: 20px 0;
     text-align: center;
 }
 
-.img-container img {
-    max-width: 100%;   /* Ảnh không tràn khung */
+.img-large {
+    max-width: 100%;
     height: auto;
+    max-height: 300px;
     display: block;
     margin: 0 auto;
+}
+
+h2, h3, h5, p {
+    margin-bottom: 10px;
+}
+
+/* Responsive: Màn hình nhỏ thì xếp chồng thành 1 cột */
+@media screen and (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
 }
